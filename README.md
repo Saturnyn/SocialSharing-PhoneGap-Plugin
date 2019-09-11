@@ -1,3 +1,12 @@
+# This is a fork
+
+The only change so for was to disable image transformation on iOS in order to solve this problem: 
+
+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/issues/1055
+
+
+
+
 # PhoneGap / Cordova Social Sharing plugin
 
 [![NPM version][npm-image]][npm-url]

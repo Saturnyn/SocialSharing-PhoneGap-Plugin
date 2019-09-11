@@ -99,7 +99,12 @@ static NSString *const kShareOptionUrl = @"url";
     if (filenames != (id)[NSNull null] && filenames != nil && filenames.count > 0) {
       NSMutableArray *files = [[NSMutableArray alloc] init];
       for (NSString* filename in filenames) {
-        NSObject *file = [self getImage:filename];
+
+        //Fork: We disable this because it has the side effect or re-encoding the images (stripping the exif data and increasing the file size, etc...)
+        //      and we only share image files anyway...
+        //NSObject *file = [self getImage:filename];
+
+        NSObject *file = nil;
         if (file == nil) {
           file = [self getFile:filename];
         }
